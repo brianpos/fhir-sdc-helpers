@@ -5,6 +5,42 @@ export namespace structuredDataCapture {
     /* Extension URLs used in the Structure Data Capture IG */
 
     // ----------------------------------------------------------------------
+    // Observation Extract Category
+    // CodeableConcept(0..*)
+    // Indicates the Observation.category value(s) that should appear on extracted Observations for the entire Questionnaire or for the current item and descendant items.  If this extension appears at multiple levels in the Questionnaire, those defined on lower-level items override those declared on higher-level items.
+    export const exturl_ObservationExtractCategory = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observation-extract-category";
+
+    export function getObservationExtractCategory(element: fhir4.Element | undefined): fhir4.CodeableConcept | undefined {
+        return extensionHelpers.getExtensionCodeableConceptValue(element, exturl_ObservationExtractCategory);
+    }
+
+    export function getObservationExtractCategorys(element: fhir4.Element | undefined): fhir4.CodeableConcept[] | undefined {
+        return extensionHelpers.getExtensionCodeableConceptValues(element, exturl_ObservationExtractCategory);
+    }
+
+    export function setObservationExtractCategory(element: fhir4.Element, value: fhir4.CodeableConcept) {
+        return extensionHelpers.setExtension(element, { url: exturl_ObservationExtractCategory, valueCodeableConcept: value });
+    }
+
+    export function addObservationExtractCategory(element: fhir4.Element, value: fhir4.CodeableConcept) {
+        return extensionHelpers.addExtension(element, { url: exturl_ObservationExtractCategory, valueCodeableConcept: value });
+    }
+
+    // ----------------------------------------------------------------------
+    // Display Name
+    // string(0..1)
+    // The title or other name to display when referencing a resource by canonical URL.
+    export const exturl_DisplayName = "http://hl7.org/fhir/StructureDefinition/display";
+
+    export function getDisplayName(element: fhir4.Element | undefined): string | undefined {
+        return extensionHelpers.getExtensionStringValue(element, exturl_DisplayName);
+    }
+
+    export function setDisplayName(element: fhir4.Element, value: string) {
+        return extensionHelpers.setExtension(element, { url: exturl_DisplayName, valueString: value });
+    }
+
+    // ----------------------------------------------------------------------
     // markdown
     // markdown(0..1)
     // This is an equivalent of the string on which the extension is sent, but includes additional markdown (see documentation about [markdown](datatypes.html#markdown). Note that using HTML  [xhtml](extension-rendering-xhtml.html) can allow for greater precision of display.
