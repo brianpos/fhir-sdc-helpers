@@ -1,0 +1,46 @@
+{
+  "name": "fhir-sdc-helpers",
+  "version": "0.1.0",
+  "description": "FHIR SDC Extension helper methods",
+  "main": "dist/structureddatacapture-r4.js",
+  "files": [
+    "readme.md",
+    "LICENSE",
+    "dist/structureddatacapture-r4.js",
+    "dist/structureddatacapture-r4.js.map",
+    "dist/structureddatacapture-r4.d.ts",
+    "dist/structureddatacapture-r4.d.ts.map"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc --watch",
+    "test": "jest",
+    "test-watch": "jest --watchAll"
+  },
+  "keywords": [
+    "fhir",
+    "sdc",
+    "structured data capture",
+    "extensions"
+  ],
+  "author": "Brian Postlethwaite",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@types/fhir": "^0.0.34",
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "fhir-extension-helpers": "^0.3.0"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "dist",
+      "node_modules"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ]
+  }
+}
