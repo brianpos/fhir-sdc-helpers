@@ -239,6 +239,20 @@ export namespace structuredDataCapture {
     }
 
     // ----------------------------------------------------------------------
+    // openLabel
+    // string(0..1)
+    // Provides a display label text beside the free-text/unrestricted type value field  (for `open-choice` items, typically radio-box or check-box lists). E.g. 'Other, please specify' or 'More reason(s)', etc.
+    export const exturl_OpenLabel = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel";
+
+    export function getOpenLabel(element: fhir4.Element | undefined): string | undefined {
+        return extensionHelpers.getExtensionStringValue(element, exturl_OpenLabel);
+    }
+
+    export function setOpenLabel(element: fhir4.Element, value: string) {
+        return extensionHelpers.setExtension(element, { url: exturl_OpenLabel, valueString: value });
+    }
+
+    // ----------------------------------------------------------------------
     // Is subject?
     // boolean(0..1)
     // If present and true, indicates that the item establishes a different subject for the group in a response.
